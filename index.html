@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport"
+		content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@EliteLink" />
+		<meta name="twitter:description" content="I'm playing the 3E Cloud game- Join Me!"/>
+		<meta property="og:title" content="3E Cloud game" />
+		<meta property="og:description" content="I'm playing the 3E Cloud game- join me!" />
+		<meta property="og:url" content="" />
+		<meta property="og:image" content="http://cw2.allencomm.com/thomson_reuters/assets/E3_cloud.png" />
+
+		<title>Allen Communication</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<div id="register-modal">
+			<div class="modal-area register">
+				<div class="modal-panel register-panel">
+					<input type="text" name="name" placeholder="Name" maxlength="15"/>
+					<input type="text" name="email" placeholder="Email Address"/>
+				<div class="button-area">
+					<button class="close-btn">Cancel</button><button class="register-btn" disabled=true>Register</button>
+				</div>
+			</div>
+			</div>
+			<div class="modal-area saving">
+				<img class="spinner" src="assets/spinner.png"/>
+			</div>
+		</div>
+		<div id="submit-score-modal">
+			<div class="modal-area submit-score">
+				<div class="modal-panel submit-score-panel">
+					<input type="text" name="name" placeholder="Name" maxlength="15"/>
+					<input type="text" name="email" placeholder="Email Address"/>
+					<div class="button-area">
+						<button class="close-btn">Cancel</button><button class="submit-btn" disabled=true>Submit</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-area not-higher">
+				<div class="modal-panel not-higher-panel">
+					<div class="text-area">Your score was not higher than your previously submitted score.</div>
+					<div class="button-area">
+					<button class="close-btn">Okay</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-area saving">
+				<img class="spinner" src="assets/spinner.png"/>
+			</div>
+		</div>
+		<div id="share-modal">
+			<div class = "modal-area share-area">
+				<div class = "modal-panel">
+					<img class = "share-icon facebook" src="assets/Fb.svg"/>
+					<img class = "share-icon twitter" src="assets/Twitter.svg"/>
+					<img class = "share-icon linkedin" src="assets/In.svg"/>
+					<div class="button-area">
+						<button class="close-btn">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-81165415-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+		<script>
+			window.WEBGL_RENDERER = true;
+			window.CANVAS_RENDERER = true;
+		</script>
+		<script src="./Bundles/vendor.bundle.js"></script>
+		<script src="./Bundles/index.bundle.js"></script>
+	</body>
+</html>

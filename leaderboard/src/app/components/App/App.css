@@ -1,0 +1,82 @@
+@keyframes float {
+    from {transform: translateY(0);}
+    to {transform: translateY(-50px);}
+}
+
+@keyframes rotate {
+    from {transform: rotate(0);}
+    to {transform: rotate(18deg);}
+}
+
+@keyframes rotate-reverse {
+    from {transform: rotate(0);}
+    to {transform: rotate(-18deg);}
+}
+
+.App {
+
+}
+
+.leaderboard-area {
+  margin: 0 auto;
+  min-width: 520px;
+  position: relative;
+}
+
+.man-container {
+  animation-name: float;
+  animation-direction: alternate;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  left: calc((100% - 820px) / 4);
+  margin-left: -104px;
+  position: absolute;
+  top: 170px;
+  visibility: hidden;
+}
+
+.man {
+  animation-name: rotate;
+  animation-direction: alternate;
+  animation-duration: 1500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.woman-container {
+  animation-name: float;
+  animation-delay: 200ms;
+  animation-direction: alternate;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-right: -66px;
+  position: absolute;
+  right: calc((100% - 820px) / 4);
+  top: 90px;
+  visibility: hidden;
+}
+
+.woman {
+  animation-name: rotate-reverse;
+  animation-delay: 200ms;
+  animation-direction: alternate;
+  animation-duration: 1500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@media (min-width: 1180px) {
+  .leaderboard-area {
+    max-width: 820px;
+  }
+
+  .man-container {
+    visibility: visible;
+  }
+
+  .woman-container {
+    visibility: visible;
+  }
+}

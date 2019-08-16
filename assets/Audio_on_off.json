@@ -1,0 +1,62 @@
+{
+	"textures": [
+		{
+			"image": "tile_sheet.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 72,
+				"h": 37
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "off",
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 37
+					},
+					"rotated": false,
+					"trimmed": false,
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 72,
+						"h": 37
+					},
+					"sourceSize": {
+						"w": 72,
+						"h": 37
+					}
+				},
+				{
+					"filename": "on",
+					"frame": {
+						"x": 36,
+						"y": 0,
+						"w": 36,
+						"h": 37
+					},
+					"rotated": false,
+					"trimmed": false,
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 72,
+						"h": 37
+					},
+					"sourceSize": {
+						"w": 72,
+						"h": 37
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:3ff603ffe56bb49d8448875a19fd1323:61efe9fd495df62d5c4454844d99f826:5b04aa198265472a3c5f56958d78e97b$"
+	}
+}

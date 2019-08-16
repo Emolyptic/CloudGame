@@ -1,0 +1,121 @@
+body, html {
+	height: 100%;
+}
+
+body {
+	background-color: #c5c3c4;
+	box-sizing: border-box;
+	margin: 0;
+	overflow: hidden;
+}
+
+canvas {
+	height: 100%;
+	margin: auto;
+	display: block;
+}
+
+#register-modal {
+	display: none;
+}
+
+#submit-score-modal {
+	display: none;
+}
+
+#share-modal{
+  display: none;
+}
+@keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+}
+.share-icon{
+  display:inline-block;
+  vertical-align: top;
+  width:30%;
+  height:30%;
+}
+.modal-area {
+  background-color: rgba(0, 0, 0, .6);
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  padding: 0 10px;
+  position: fixed;
+  top: 0;
+  transition: opacity 500ms ease-in-out;
+  visibility: hidden;
+  white-space: normal;
+  width: 100%;
+}
+
+.modal-area.active {
+	visibility: visible;
+}
+
+.modal-panel {
+  background-color: #fff;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, .25);
+  font-size: 20px;
+  margin: 100px auto 0 auto;
+  max-width: 400px;
+  padding: 40px 25px;
+  text-align: left;
+}
+
+.modal-panel input {
+    background-color: #fefefe;
+    border: 1px solid #666;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    padding: 5px;
+    width: 100%;
+}
+
+.modal-panel input[disabled=true] {
+	background-color: #efefef;
+	color: #666;
+}
+
+.button-area {
+  margin: -40px -25px;
+  margin-top: 10px;
+  text-align: right;
+}
+
+button {
+  color: #fff;
+  border: 0;
+  font-weight: bold;
+  outline: 0;
+  padding: 10px 20px;
+  width: 50%;
+}
+
+button[disabled=true] {
+    background-color: #ccc;
+    color: #666;
+}
+
+.spinner {
+	animation-name: spin;
+	animation-duration: 1250ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+}
+
+@media all and (min-width: 1010px) {
+	body {
+		padding: 20px;
+	}
+}

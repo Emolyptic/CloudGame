@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Test Page</title>
+	<style>
+
+		body {
+			padding: 20px;
+		}
+
+		.test-group label {
+			display: inline-block;
+			width: 100px;
+		}
+
+		.test-group input {
+			width: 200px;
+		}
+
+		.test-row {
+			margin-bottom: 10px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="test-group">
+		<div class="test-row">
+			<label>First Name:</label>
+			<input id="first-name"/>
+		</div>
+		<div class="test-row">
+			<label>Last Name:</label>
+			<input id="last-name"/>
+		</div>
+		<div class="test-row">
+			<label>Email:</label>
+			<input id="email"/>
+		</div>
+		<a href="javascript:testCreateUser();">Create User</a>
+		<div id="create-user-result"></div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="https://3Esuperhero.yourcoursewarehosting.com/core/script/PortalAPI.js"></script>
+	<script>
+
+		var portalAPI = new PortalWebService('https://3Esuperhero.yourcoursewarehosting.com/core/PortalAPI.asmx', 'ioscompanion');
+
+		console.log('-portalAPI-');
+		console.log(portalAPI);
+
+		function testCreateUser () {
+			var data = {
+					 firstName: $('#first-name').val(),
+					 lastName: $('#last-name').val(),
+					 email: $('#email').val()
+			};
+			portalAPI.CallMethod('CreateUpdateUserFromJson', { jsonData: JSON.stringify(data) }, true, function (response) {
+
+				console.log(response);
+				console.log(arguments);
+
+				$('#create-user-result').html(response);
+			});
+		}
+
+	</script>
+</body>
+</html>
